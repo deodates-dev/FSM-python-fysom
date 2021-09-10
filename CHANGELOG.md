@@ -1,5 +1,8 @@
 Changelog for fysom
 --------------------
+* v2.1.6
+  Import ABC from collections.abc instead of collections for Python 3 compatibility
+  [Pull request](https://github.com/mriehl/fysom/pull/42) by [tirkarthi](https://github.com/tirkarthi), thanks!
 * v2.1.5
   Global machine and some improvements.
   [Pull request](https://github.com/mriehl/fysom/pull/36) by [jxskiss](https://github.com/jxskiss)
