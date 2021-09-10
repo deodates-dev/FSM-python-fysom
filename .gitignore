@@ -48,3 +48,5 @@ dist-rpms
 
 # Sublime text
 *.sublime-*
+
+.pybuilder

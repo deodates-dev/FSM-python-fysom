@@ -5,12 +5,15 @@ python:
   - "3.3"
   - "3.4"
   - "3.5"
+  - "3.6"
+  - "3.7"
+  - "3.8"
+  - "3.9"
   - "pypy"
 
 install:
   - pip install pybuilder
   - pip install coveralls
-  - pyb install_dependencies
 script: "pyb verify analyze"
 after_success:
   - coveralls --verbose
