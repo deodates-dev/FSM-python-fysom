@@ -44,8 +44,7 @@ Developer setup
 This module uses `PyBuilder <http://pybuilder.github.io>`_.
 ::
 
-    sudo pip install pyb_init
-    pyb-init github mriehl : fysom
+    pip install pybuilder
 
 Running the tests
 -----------------
@@ -59,9 +58,21 @@ Generating and using a setup.py
 
 ::
 
-    pyb
+    pyb package -E linux-release
     cd target/dist/fysom-$VERSION
     ./setup.py bdist_rpm #build RPM
+
+Publish sdist to PyPI
+-------------------------------
+
+::
+
+    pip install twine
+    pyb package -E linux-release
+    cd target/dist/fysom-$VERSION
+    ./setup.py sdist
+    # requires .pypirc configuration, obviously
+    twine upload -r pypi dist/*
 
 Looking at the coverage
 -----------------------
