@@ -284,9 +284,9 @@ NOTE if an event can be triggered from any state, you can specify it using the
                      {'name': 'eat_a_lot', 'src': '*', 'dst': 'sick'},
                      {'name': 'rest', 'dst': 'hungry'}]})
 
-NOTE if an event will not change the current state, you can specify destination
-using the ``=`` symbol. It's useful when using wildcard source or multiply
-sources:
+NOTE if an event will not change the current state, you can specify the
+destination using the ``=`` symbol. It's useful when using wildcard source or
+multiple sources:
 
 .. code:: python
    :number-lines:
@@ -416,7 +416,7 @@ model objects (database records) in memory, using global machine can save a lot
 of memory, `here is a compare
 <https://github.com/pytransitions/transitions/issues/146#issuecomment-325190021>`_.
 
-The basic usage is same with Fysom, with slit difference and enhancement:
+The basic usage is same with Fysom, with slight differences and enhancements:
 
 - Initial state will only be automatically triggered for class derived from
   ``FysomGlobalMixin``. Or you need to trigger manually.
