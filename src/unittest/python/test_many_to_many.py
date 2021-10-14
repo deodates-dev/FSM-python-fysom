@@ -54,19 +54,19 @@ class FysomManyToManyTransitionTests(unittest.TestCase):
     def test_rest_should_always_transition_to_hungry_state(self):
         fsm = Fysom(self.fsm_descr)
         fsm.rest()
-        self.assertEquals(fsm.current, 'hungry')
+        self.assertEqual(fsm.current, 'hungry')
 
         fsm = Fysom(self._get_descr('satisfied'))
         fsm.rest()
-        self.assertEquals(fsm.current, 'hungry')
+        self.assertEqual(fsm.current, 'hungry')
 
         fsm = Fysom(self._get_descr('full'))
         fsm.rest()
-        self.assertEquals(fsm.current, 'hungry')
+        self.assertEqual(fsm.current, 'hungry')
 
         fsm = Fysom(self._get_descr('sick'))
         fsm.rest()
-        self.assertEquals(fsm.current, 'hungry')
+        self.assertEqual(fsm.current, 'hungry')
 
     def test_eat_should_transition_to_satisfied_when_hungry(self):
         fsm = Fysom(self._get_descr('hungry'))

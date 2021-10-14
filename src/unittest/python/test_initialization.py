@@ -65,7 +65,7 @@ class FysomInitializationTests(unittest.TestCase):
                 {'name': 'calm', 'src': 'red', 'dst': 'green'},
             ]
         })
-        self.assertEquals(fsm.current, 'green')
+        self.assertEqual(fsm.current, 'green')
 
     def test_deferred_initial_state_should_be_none_then_state(self):
         fsm = Fysom({
